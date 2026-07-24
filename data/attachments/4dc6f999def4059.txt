@@ -1,0 +1,4 @@
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PUT https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-4fdde3869505/folder-1212cfb3536c'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 POST https://cloud-api.yandex.net/v1/disk/resources/move params={'path': 'disk:/pytest-sandbox-folder-4fdde3869505/folder-ec5f52272896', 'from': 'disk:/pytest-sandbox-folder-4fdde3869505/folder-1212cfb3536c'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-4fdde3869505/folder-ec5f52272896'} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 DELETE https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-4fdde3869505/folder-1212cfb3536c', 'permanently': 'true', 'force_async': 'true'} -> 404

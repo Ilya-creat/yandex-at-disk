@@ -1,0 +1,10 @@
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PUT https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-2f6dea095dea/folder-f446d0996779'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 DELETE https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-2f6dea095dea/folder-f446d0996779', 'force_async': 'true'} -> 202
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/2107cec9e45fb742fbbbb4e0da96461dc273c48f2bb9f795b97bb9cbd5addf4a  -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/2107cec9e45fb742fbbbb4e0da96461dc273c48f2bb9f795b97bb9cbd5addf4a  -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/trash/resources params={'path': 'trash:/'} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PUT https://cloud-api.yandex.net/v1/disk/trash/resources/restore params={'path': 'trash:/folder-f446d0996779_bfd68ff4204be71c6cbe753a4d957ff7285e5b70'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-2f6dea095dea/folder-f446d0996779'} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 DELETE https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-2f6dea095dea/folder-f446d0996779', 'permanently': 'true', 'force_async': 'true'} -> 202
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/0f23d2276f5fba7d54df968c217c4b00b641b77c111bcf2305b25ca02efaf8de  -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/0f23d2276f5fba7d54df968c217c4b00b641b77c111bcf2305b25ca02efaf8de  -> 200
