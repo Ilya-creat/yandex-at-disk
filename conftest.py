@@ -2,8 +2,8 @@ import allure
 import pytest
 from dotenv import load_dotenv
 
-from test_data.default_paths_data import DefaultPaths
 from models.requests.resources import CreateResourceRequest, DeleteResourceRequest
+from test_data.default_paths_data import DefaultPaths
 from utils.helpers.api_client_helpers import ApiClient
 from utils.helpers.auth_helpers import get_token_from_env
 from utils.helpers.name_generator_helpers import random_folder_name

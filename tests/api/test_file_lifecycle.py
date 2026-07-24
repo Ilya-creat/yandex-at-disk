@@ -104,7 +104,9 @@ class TestFileLifecyclePositive:
             assert_resource_exists(api_client, f"{move_destination}/{file_name}")
 
         with allure.step("Удалить перемещённую папку в корзину и восстановить её обратно"):
-            delete_response = delete_resource(api_client, DeleteResourceRequest(path=move_destination, force_async=True))
+            delete_response = delete_resource(
+                api_client, DeleteResourceRequest(path=move_destination, force_async=True)
+            )
             resolve_maybe_async(api_client, delete_response)
 
             trash_path = find_trash_path(api_client, move_destination)

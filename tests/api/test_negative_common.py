@@ -1,8 +1,8 @@
 import allure
 import pytest
 
-from test_data.error_codes_data import ErrorCodes
 from models.requests.resources import CreateResourceRequest, GetResourceRequest
+from test_data.error_codes_data import ErrorCodes
 from utils.checkers.error_checkers import assert_error_response
 from utils.checkers.response_code_checkers import assert_response_code
 from utils.helpers.api_client_helpers import ApiClient

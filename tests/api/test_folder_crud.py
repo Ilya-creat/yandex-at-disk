@@ -2,8 +2,8 @@ import allure
 import pytest
 
 from models import ResourceModel
-from test_data.error_codes_data import ErrorCodes
 from models.requests.resources import CreateResourceRequest, DeleteResourceRequest, GetResourceRequest
+from test_data.error_codes_data import ErrorCodes
 from utils.checkers.error_checkers import assert_error_response
 from utils.checkers.model_checkers import assert_body_is_instance
 from utils.checkers.resource_checkers import assert_resource_type
