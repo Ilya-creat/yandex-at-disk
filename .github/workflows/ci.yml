@@ -6,6 +6,16 @@ on:
     branches: [master, main]
     types: [opened, synchronize, reopened, closed]
   workflow_dispatch:
+    inputs:
+      test_scope:
+        description: "Какие автотесты запускать"
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - non-destructive
+          - destructive
 
 jobs:
   lint:
@@ -35,9 +45,11 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Regression tests (non-destructive)
+        if: github.event_name != 'workflow_dispatch' || inputs.test_scope != 'destructive'
         run: pytest -m "regress and not destructive" --alluredir=allure-results
 
       - name: Regression tests (destructive)
+        if: github.event_name != 'workflow_dispatch' || inputs.test_scope != 'non-destructive'
         run: pytest -m "regress and destructive" --alluredir=allure-results
 
       - name: Upload allure results
