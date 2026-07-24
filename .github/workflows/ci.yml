@@ -71,7 +71,7 @@ jobs:
           path: allure-results
 
       - name: Load previous report history
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         continue-on-error: true
         with:
           ref: gh-pages
