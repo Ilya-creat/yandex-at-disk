@@ -5,6 +5,7 @@ on:
   pull_request:
     branches: [master, main]
     types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -20,13 +21,13 @@ jobs:
       - run: ruff check .
 
   test:
-    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     needs: lint
     env:
       YANDEX_DISK_TOKEN: ${{ secrets.YANDEX_DISK_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
           python-version: "3.14"
@@ -55,7 +56,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - uses: actions/setup-python@v5
