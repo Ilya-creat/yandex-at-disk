@@ -1,0 +1,6 @@
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PUT https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-f24ea013f267'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PATCH https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-f24ea013f267'} json={'custom_properties': {'tested_by': 'pytest'}} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PATCH https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-f24ea013f267'} json={'custom_properties': {'tested_by': None}} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 DELETE https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-f24ea013f267', 'permanently': 'true', 'force_async': 'true'} -> 202
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/3755ebfcc8e060137534d265a3d867a4702e862568dc2c588fed40aee187aa87  -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/3755ebfcc8e060137534d265a3d867a4702e862568dc2c588fed40aee187aa87  -> 200

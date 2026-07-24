@@ -1,0 +1,7 @@
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 PUT https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-38c2bc8e5b77'} -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/resources/upload params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-38c2bc8e5b77/file-96d2022f9d4d.txt', 'overwrite': 'true'} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:60 PUT https://uploader605vla.disk.yandex.net:443/upload-target/20260724T102533.222.utd.9yvwhyau3hexec9mbcud2lq3s-k605vla.236936 data=<1024 bytes> -> 201
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/resources/files params={'limit': 200} -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 DELETE https://cloud-api.yandex.net/v1/disk/resources params={'path': 'disk:/pytest-sandbox-folder-6bebb0e20d0b/folder-38c2bc8e5b77', 'permanently': 'true', 'force_async': 'true'} -> 202
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/71385486b805a8a3d53c9ff73fd2265a0d095cff7bdf9783cdfd60a93a8616cd  -> 200
+INFO     utils.helpers.api_client_helpers:api_client_helpers.py:67 GET https://cloud-api.yandex.net/v1/disk/operations/71385486b805a8a3d53c9ff73fd2265a0d095cff7bdf9783cdfd60a93a8616cd  -> 200
