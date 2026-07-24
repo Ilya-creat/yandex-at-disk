@@ -59,21 +59,16 @@ jobs:
           retention-days: 14
 
   publish-report:
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    env:
-      YANDEX_DISK_TOKEN: ${{ secrets.YANDEX_DISK_TOKEN }}
+    needs: test
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - name: Download allure results from the test job
+        uses: actions/download-artifact@v4
         with:
-          python-version: "3.14"
-          cache: pip
-      - run: pip install -r requirements.txt
-      - name: Full regression suite
-        run: pytest -m regress --alluredir=allure-results
+          name: allure-results
+          path: allure-results
 
       - name: Load previous report history
         uses: actions/checkout@v4
