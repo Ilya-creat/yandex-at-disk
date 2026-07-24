@@ -13,8 +13,8 @@ from utils.routes.resources_routes import create_resource, delete_resource, get_
 
 pytestmark = pytest.mark.regress
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Файлы и папки")
+@allure.story("Файлы и папки")
+@allure.feature("API-AUTOTEST")
 class TestFolderCrudPositive:
     @allure.title("Пользователь может создать папку")
     def test_create_folder_succeeds(self, api_client, sandbox_root):
@@ -49,8 +49,8 @@ class TestFolderCrudPositive:
         with allure.step("Проверить код ответа"):
             assert_response_code(response, 204)
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Файлы и папки")
+@allure.story("Файлы и папки")
+@allure.feature("API-AUTOTEST")
 class TestFolderCrudNegative:
     @allure.title("Запрос метаданных несуществующей папки завершается ошибкой")
     def test_get_meta_for_missing_folder_fails(self, api_client, sandbox_root):

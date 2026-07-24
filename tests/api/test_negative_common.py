@@ -13,8 +13,8 @@ from utils.routes.resources_routes import create_resource, get_resource
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Негативные / общие")
+@allure.story("Негативные / общие")
+@allure.feature("API-AUTOTEST")
 class TestNegativeCommonNegative:
     @allure.title("Невалидный токен авторизации отклоняется")
     def test_request_with_invalid_token_is_rejected(self):

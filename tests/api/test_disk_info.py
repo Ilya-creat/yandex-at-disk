@@ -10,8 +10,8 @@ from utils.routes.disk_info_routes import get_disk_info
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Метаинформация о Диске")
+@allure.story("Метаинформация о Диске")
+@allure.feature("API-AUTOTEST")
 class TestDiskInfoPositive:
     @allure.title("Метаинформация о Диске отдаётся в корректном формате")
     def test_get_disk_info_returns_valid_model(self, api_client):
