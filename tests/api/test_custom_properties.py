@@ -1,8 +1,8 @@
 import allure
 import pytest
 
-from test_data.limits_data import Limits
 from models.requests.resources import CustomPropertiesBody, PatchResourceRequest
+from test_data.limits_data import Limits
 from utils.checkers.resource_checkers import assert_custom_property_absent, assert_custom_property_value
 from utils.checkers.response_code_checkers import assert_response_code
 from utils.routes.resources_routes import patch_resource
@@ -10,8 +10,8 @@ from utils.routes.resources_routes import patch_resource
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Файлы и папки")
+@allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestCustomPropertiesPositive:
     @allure.title("Пользователь может задать пользовательское свойство ресурса")
     @pytest.mark.destructive

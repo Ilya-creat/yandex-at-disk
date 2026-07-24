@@ -1,4 +1,4 @@
-# yandex-at-disk
+# Автотесты Яндекс.Диск
 
 Автотесты для REST API Яндекс.Диска (`https://cloud-api.yandex.net`).
 
@@ -32,19 +32,23 @@ pytest -m "not destructive"               # только немутирующи�
 pytest --alluredir=allure-results         # с allure-отчётом
 ```
 
+## CI/CD
+
+Настроена система пеплайнов: ruff, allure-report
+
 ## Структура проекта
 
 ```
-test_data/            — статичные данные: коды ошибок, media_type, лимиты, дефолтные пути (*_data.py)
-  requests/            — dataclass-модели параметров/тела запроса, сгруппированные как в API (*_request.py)
-models/                — dataclass-модели тел ответа (ResourceModel, DiskInfoModel, LinkModel, OperationModel,
-                         ErrorModel, ResourceListModel) и ApiResponse — обёртка над сырым requests.Response
+test_data/             — статичные данные: коды ошибок, media_type, лимиты, дефолтные пути (*_data.py)
+models/                 — dataclass-модели тел ответа (ResourceModel, DiskInfoModel, LinkModel, OperationModel,
+                          ErrorModel, ResourceListModel) и ApiResponse — обёртка над сырым requests.Response
+  requests/              — dataclass-модели параметров/тела запроса, сгруппированные как в API
 utils/
-  routes/              — вызовы ручек, сгруппированные как в документации API (Файлы и папки, Корзина,
-                         Метаинформация о Диске, Операции, Публичные файлы и папки). Каждая функция —
-                         allure.step, парсит JSON в модель из models/ и возвращает ApiResponse
-  helpers/             — ApiClient, авторизация, генерация имён, работа с файлами, поллинг операций (*_helpers.py)
-  checkers/            — ассерты по коду ответа, ошибке, модели ответа и предметной области (*_checkers.py)
-tests/api/             — тестовые файлы (*_test.py — нестандартное именование, задано в pytest.ini).
-                         Тесты сгруппированы в классы <Файл>Positive / <Файл>Negative
+  routes/                — вызовы ручек, сгруппированные как в документации API (Файлы и папки, Корзина,
+                          Метаинформация о Диске, Операции, Публичные файлы и папки). Каждая функция —
+                          allure.step, парсит JSON в модель из models/ и возвращает ApiResponse
+  helpers/               — ApiClient, авторизация, генерация имён, работа с файлами, поллинг операций (*_helpers.py)
+  checkers/              — ассерты по коду ответа, ошибке, модели ответа и предметной области (*_checkers.py)
+tests/api/               — тестовые файлы (test_*.py). Тесты сгруппированы в классы
+                          Test<Файл>Positive / Test<Файл>Negative
 ```

@@ -35,8 +35,8 @@ from utils.routes.trash_routes import restore_from_trash
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Интеграционные сценарии")
+@allure.feature("API-AUTOTEST")
+@allure.story("Интеграционные сценарии")
 class TestFileLifecyclePositive:
     @allure.title("Загрузка файла увеличивает занятое место на Диске, удаление — освобождает")
     @pytest.mark.destructive
@@ -104,7 +104,9 @@ class TestFileLifecyclePositive:
             assert_resource_exists(api_client, f"{move_destination}/{file_name}")
 
         with allure.step("Удалить перемещённую папку в корзину и восстановить её обратно"):
-            delete_response = delete_resource(api_client, DeleteResourceRequest(path=move_destination, force_async=True))
+            delete_response = delete_resource(
+                api_client, DeleteResourceRequest(path=move_destination, force_async=True)
+            )
             resolve_maybe_async(api_client, delete_response)
 
             trash_path = find_trash_path(api_client, move_destination)

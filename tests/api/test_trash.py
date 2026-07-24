@@ -15,8 +15,8 @@ from utils.routes.trash_routes import get_trash, restore_from_trash
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Корзина")
+@allure.feature("API-AUTOTEST")
+@allure.story("Корзина")
 class TestTrashPositive:
     @allure.title("Удалённый ресурс без permanently оказывается в корзине")
     @pytest.mark.destructive

@@ -19,8 +19,8 @@ from utils.routes.resources_routes import (
 pytestmark = pytest.mark.regress
 
 
-@allure.story("API-AUTOTEST")
-@allure.feature("Файлы и папки")
+@allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestUploadDownloadPositive:
     @allure.title("Скачанный файл идентичен загруженному")
     @pytest.mark.destructive
