@@ -78,7 +78,7 @@ jobs:
           path: gh-pages
 
       - name: Build Allure report
-        uses: simple-elf/allure-report-action@master
+        uses: simple-elf/allure-report-action@v1.14
         with:
           gh_pages: gh-pages
           allure_history: allure-history
