@@ -10,8 +10,8 @@ from utils.routes.resources_routes import patch_resource
 pytestmark = pytest.mark.regress
 
 
-@allure.story("Файлы и папки")
 @allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestCustomPropertiesPositive:
     @allure.title("Пользователь может задать пользовательское свойство ресурса")
     @pytest.mark.destructive

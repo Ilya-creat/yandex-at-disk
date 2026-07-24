@@ -35,8 +35,8 @@ from utils.routes.trash_routes import restore_from_trash
 pytestmark = pytest.mark.regress
 
 
-@allure.story("Интеграционные сценарии")
 @allure.feature("API-AUTOTEST")
+@allure.story("Интеграционные сценарии")
 class TestFileLifecyclePositive:
     @allure.title("Загрузка файла увеличивает занятое место на Диске, удаление — освобождает")
     @pytest.mark.destructive

@@ -15,8 +15,8 @@ def _upload_file(api_client, path: str) -> None:
     link_response = get_upload_link(api_client, UploadLinkRequest(path=path, overwrite=True))
     upload_content(api_client, link_response.body, build_test_file())
 
-@allure.story("Файлы и папки")
 @allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestFilesListingPositive:
     @allure.title("Загруженный файл попадает в плоский список файлов")
     @pytest.mark.destructive

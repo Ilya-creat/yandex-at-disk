@@ -12,8 +12,8 @@ from utils.routes.resources_routes import copy_resource, create_resource, move_r
 pytestmark = pytest.mark.regress
 
 
-@allure.story("Файлы и папки")
 @allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestMoveCopyPositive:
     @allure.title("Пользователь может переместить папку")
     def test_move_folder_to_new_path_succeeds(self, api_client, sandbox_folder, sandbox_root):
@@ -37,8 +37,8 @@ class TestMoveCopyPositive:
             assert_resource_exists(api_client, destination)
 
 
-@allure.story("Файлы и папки")
 @allure.feature("API-AUTOTEST")
+@allure.story("Файлы и папки")
 class TestMoveCopyNegative:
     @allure.title("Нельзя переместить папку поверх занятого пути без overwrite")
     def test_move_to_existing_path_without_overwrite_fails(self, api_client, sandbox_folder, sandbox_root):
